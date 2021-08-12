@@ -32,7 +32,7 @@ public class MyFilter implements Filter {
 
     private boolean process(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        if (request.getRequestURI().endsWith(".css") || request.getRequestURI().startsWith("/images") || request.getRequestURI().startsWith("/favicon")) {
+        if (request.getRequestURI().endsWith(".css") || request.getRequestURI().startsWith("/images") || request.getRequestURI().startsWith("/favicon") || request.getRequestURI().startsWith("/templates")|| request.getRequestURI().startsWith("/js")) {
            // System.out.println(request.getRequestURI());
             return false;
         }
