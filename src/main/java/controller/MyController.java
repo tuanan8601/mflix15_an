@@ -19,7 +19,7 @@ public abstract class MyController implements IController {
         String db = "MovieDB";
 
         if (db.equals("MongoDB")) {
-            movieDAO = new DAO.MovieDB.MovieDAO();
+            movieDAO = new DAO.MongoDB.MovieDAO();
         } else if (db.equals("MovieDB")) {
             movieDAO = new DAO.MovieDB.MovieDAO();
         }
