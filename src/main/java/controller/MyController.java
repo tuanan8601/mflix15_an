@@ -1,5 +1,6 @@
 package controller;
 
+import DAO.IMovieDAO;
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.context.WebContext;
 import utils.MyCookie;
@@ -12,6 +13,8 @@ import java.util.Locale;
 
 public abstract class MyController implements IController {
     WebContext ctx;
+
+    IMovieDAO movieDAO = new DAO.MovieDB.MovieDAO();
 
     public void process(HttpServletRequest request, HttpServletResponse response, ServletContext servletContext, ITemplateEngine templateEngine) throws Exception {
         String lang = request.getParameter("lang");

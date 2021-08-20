@@ -1,5 +1,6 @@
-package DAO;
+package DAO.MongoDB;
 
+import DAO.MongoDB.AbsDAO;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import model.Comment;

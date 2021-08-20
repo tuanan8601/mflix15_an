@@ -22,7 +22,7 @@
             <div class="col" th:each="movie : ${list}">
                 <div class="card p-0">
                     <div class="imgPlaceHolder">
-                        <a href="movie.html" th:href="@{/movie(id=${movie.getId()})}" class="text-decoration-none">
+                        <a href="movie.html" th:href="@{/movie(id=${movie.getMovieID()})}" class="text-decoration-none">
                             <img th:src="${movie.getPoster()}" class="card-img-top">
                         </a>
                     </div>

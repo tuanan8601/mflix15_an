@@ -1,11 +1,14 @@
 package service;
 
-import DAO.CommentDAO;
+import DAO.IMovieDAO;
+import DAO.MongoDB.CommentDAO;
 import com.mongodb.client.FindIterable;
 import model.Comment;
 import org.bson.Document;
 
 public class CommentService {
+
+    IMovieDAO movieDAO;
 
     public FindIterable<Comment> getComments(String by, Object value) {
         Document filter = new Document();
