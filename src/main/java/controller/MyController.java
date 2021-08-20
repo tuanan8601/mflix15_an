@@ -15,8 +15,14 @@ public abstract class MyController implements IController {
     WebContext ctx;
 
     IMovieDAO movieDAO = new DAO.MovieDB.MovieDAO();
-
     public void process(HttpServletRequest request, HttpServletResponse response, ServletContext servletContext, ITemplateEngine templateEngine) throws Exception {
+        String db = "MovieDB";
+
+        if (db.equals("MongoDB")) {
+            movieDAO = new DAO.MovieDB.MovieDAO();
+        } else if (db.equals("MovieDB")) {
+            movieDAO = new DAO.MovieDB.MovieDAO();
+        }
         String lang = request.getParameter("lang");
         Locale locale = new Locale("en");
 
