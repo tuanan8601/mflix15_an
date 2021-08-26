@@ -6,6 +6,10 @@ import com.mongodb.client.FindIterable;
 import model.Comment;
 import org.bson.Document;
 
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+@Path("/comment")
 public class CommentService {
 
     IMovieDAO movieDAO;
@@ -18,7 +22,10 @@ public class CommentService {
         return list;
     }
 
-    public void addComment(Comment comment) {
+    @POST
+    @Path("/add")
+    public String addComment(Comment comment) {
         new CommentDAO().addComment(comment);
+        return "";
     }
 }

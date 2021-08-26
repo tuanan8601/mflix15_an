@@ -16,7 +16,7 @@ public abstract class MyController implements IController {
 
     IMovieDAO movieDAO = new DAO.MovieDB.MovieDAO();
     public void process(HttpServletRequest request, HttpServletResponse response, ServletContext servletContext, ITemplateEngine templateEngine) throws Exception {
-        String db = "MovieDB";
+        String db = "MongoDB";
 
         if (db.equals("MongoDB")) {
             movieDAO = new DAO.MongoDB.MovieDAO();
